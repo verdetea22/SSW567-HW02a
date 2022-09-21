@@ -49,14 +49,16 @@ def classifyTriangle(a,b,c):
     triangleType = ""
     a, b, c = sorted([a, b, c])    
     # now we know that we have a valid triangle 
-    if a == b and b == a:
+    if a == b and a == c and b == c:
         triangleType = 'Equilateral'
         
     elif ((a * a) + (b * b)) == (c * c):
         triangleType = 'Right'
         
-    elif (a != b) and (b != c) and (a != c):
+    elif b not in (a, c) and a not in (b, c):
         triangleType = 'Scalene'
         
     else:
         triangleType = 'Isoceles'
+        
+    return triangleType
