@@ -60,6 +60,6 @@ def classifyTriangle(a,b,c):
         triangleType = 'Scalene'
         
     else:
-        triangleType = 'Isoceles'
+        triangleType = 'Isosceles'
         
     return triangleType
