@@ -38,12 +38,12 @@ def classifyTriangle(a,b,c):
     # Python's "isinstance(object,type) returns True if the object is of the specified type
     if not(isinstance(a,int) and isinstance(b,int) and isinstance(c,int)):
         return 'InvalidInput'
-      
+  
     # This information was not in the requirements spec but 
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a > (b + c)) or (b > (a + c)) or (c > (a + b)):
+    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
         return 'NotATriangle'
     
     triangleType = ""
@@ -52,10 +52,10 @@ def classifyTriangle(a,b,c):
     if a == b and a == c and b == c:
         triangleType = 'Equilateral'
         
-    elif ((a * a) + (b * b)) == (c * c):
+    elif ((a * a) + (b * b)) == (c * c) or ((a * a) + (c * c)) == (b * b) or ((b * b) + (c * c)) == (a*a ):
         triangleType = 'Right'
         
-    elif b not in (a, c) and a not in (b, c):
+    elif (a != b) and  (b != c) and (a != c): 
         triangleType = 'Scalene'
         
     else:
