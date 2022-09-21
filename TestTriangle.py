@@ -23,6 +23,8 @@ class TestTriangles(unittest.TestCase):
     def testRightTriangleB(self): 
         self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
     
+    def testEquilateralTriangles(self): 
+        self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
 
 if __name__ == '__main__':
     print('Running unit tests')
