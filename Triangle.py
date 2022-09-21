@@ -45,20 +45,19 @@ def classifyTriangle(a,b,c):
     # of the specified shape is not a triangle
     if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
         return 'NotATriangle'
-    
-    triangleType = ""
+ 
     a, b, c = sorted([a, b, c])    
     # now we know that we have a valid triangle 
+    
     if a == b and a == c and b == c:
-        triangleType = 'Equilateral'
+        return 'Equilateral'
         
-    elif ((a * a) + (b * b)) == (c * c) or ((a * a) + (c * c)) == (b * b) or ((b * b) + (c * c)) == (a*a ):
-        triangleType = 'Right'
+    elif (((a * a) + (b * b)) == (c * c)) or (((a * a) + (c * c)) == (b * b)) or (((b * b) + (c * c)) == (a * a)):
+        return 'Right'
         
     elif (a != b) and  (b != c) and (a != c): 
-        triangleType = 'Scalene'
+        return 'Scalene'
         
     else:
-        triangleType = 'Isoceles'
+        return 'Isoceles'
         
-    return triangleType
