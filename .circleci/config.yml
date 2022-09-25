@@ -8,6 +8,7 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
+  say-hello:
   jobs:
   build-and-test:
     docker:
@@ -30,3 +31,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - build-and-test
