@@ -1,5 +1,5 @@
 [![verdetea22](https://circleci.com/gh/verdetea22/SSW567-HW02a.svg?style=svg)](https://app.circleci.com/pipelines/github/verdetea22/SSW567-HW02a?branch=main&filter=all)
-# SSW567-HW02a
+# SSW567-HW02
 
 Mikayla Mount
 
@@ -9,7 +9,7 @@ Dr. Bondi
 
 9/19/2022
 
-HW02a
+HW02a Report
 
 I pledge my Honor that I have abided by the Stevens Honor System.
 
