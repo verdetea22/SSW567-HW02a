@@ -18,7 +18,7 @@ jobs:
           command: |
             pip install pytest
             pytest --junitxml=test-results/junit.xml TestTriangle.py
-            - python -m unittest TestTriangle
+       
             
        
       - store_test_results:
